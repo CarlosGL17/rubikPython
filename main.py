@@ -1,0 +1,25 @@
+import cube
+import movements as move
+
+move.U2()
+move.b()
+move.D2()
+move.b()
+move.R2()
+move.b()
+move.D2()
+move.B()
+move.F2()
+move.L2()
+move.D()
+move.L()
+move.U()
+move.f()
+move.r()
+move.f()
+move.L2()
+move.R2()
+move.U()
+move.F()
+
+cube.Print()
