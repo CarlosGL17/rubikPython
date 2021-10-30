@@ -1,25 +1,25 @@
-import cube
-import movements as move
+import numpy as np
 
-move.U2()
-move.b()
-move.D2()
-move.b()
-move.R2()
-move.b()
-move.D2()
-move.B()
-move.F2()
-move.L2()
-move.D()
-move.L()
-move.U()
-move.f()
-move.r()
-move.f()
-move.L2()
-move.R2()
-move.U()
-move.F()
+import cube
+import movements2 as move
+import algorithms as al
+import solver
+import scrambles as sc
+
+cube.Print()
+
+sc.scramble2()
+
+count = 1
+
+while( not(np.array_equal(cube.initialUp, cube.up)
+        and np.array_equal(cube.initialDown, cube.down)
+        and np.array_equal(cube.initialLeft, cube.left)
+        and np.array_equal(cube.initialRight, cube.right)
+        and np.array_equal(cube.initialFront, cube.front)
+        and np.array_equal(cube.initialBack, cube.back)
+    )):
+    count = count + 1
+    sc.scramble2()
 
 cube.Print()

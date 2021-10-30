@@ -1,12 +1,59 @@
 import numpy as np
-from sty import fg, rs, Style, RgbFg
+from sty import fg, Style, RgbFg
+
+initialUp = [
+    ['Y', 'Y', 'Y'],
+    ['Y', 'Y', 'Y'],
+    ['Y', 'Y', 'Y']
+]
+
+initialUp = np.array(initialUp)
+
+initialLeft = [
+    ['B', 'B', 'B'],
+    ['B', 'B', 'B'],
+    ['B', 'B', 'B']
+]
+
+initialLeft = np.array(initialLeft)
+
+initialFront = [
+    ['R', 'R', 'R'],
+    ['R', 'R', 'R'],
+    ['R', 'R', 'R']
+]
+
+initialFront = np.array(initialFront)
+
+initialRight = [
+    ['G', 'G', 'G'],
+    ['G', 'G', 'G'],
+    ['G', 'G', 'G']
+]
+
+initialRight = np.array(initialRight)
+
+initialBack = [
+    ['O', 'O', 'O'],
+    ['O', 'O', 'O'],
+    ['O', 'O', 'O']
+]
+
+initialBack = np.array(initialBack)
+
+initialDown = [
+    ['W', 'W', 'W'],
+    ['W', 'W', 'W'],
+    ['W', 'W', 'W']
+]
+
+initialDown = np.array(initialDown)
 
 up = [
     ['Y', 'Y', 'Y'],
     ['Y', 'Y', 'Y'],
     ['Y', 'Y', 'Y']
 ]
-
 up = np.array(up)
 
 left = [
@@ -81,3 +128,7 @@ def Print():
             if(cubeMap[i][j] == ' '):
                 print(cubeMap[i][j], end='   ')
         print('')
+
+def obtainEdges():
+    edges = ([front[0][1], up[2][1]], [front[1][0], left[1][2]], [front[1][2], right[1][0]], [front[2][1], down[0][1]])
+    print(edges)
